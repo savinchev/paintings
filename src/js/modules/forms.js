@@ -1,4 +1,4 @@
-// import checkNumInputs from './checkNumInputs';
+import { postData } from "./services/requests";
 
 const forms = () => {
 
@@ -22,16 +22,6 @@ const forms = () => {
         question: 'assets/question.php'
     }
 
-    const postData = async (url, data) => {
-
-        let res = await fetch(url, {
-            method: 'POST',
-            body: data
-        });
-
-        return await res.text();
-    };
-
     const clearInputs = () => {
         inputs.forEach(item => item.value = '');
         upload.forEach(item => item.previousElementSibling.textContent = 'Файл не выбран');
@@ -46,8 +36,8 @@ const forms = () => {
             const name = arr[0].substring(0, 6) + dots + arr[1];
 
             item.previousElementSibling.textContent = name;
-        })
-    })
+        });
+    });
 
     form.forEach(item => {
         item.addEventListener('submit', e => {
@@ -98,8 +88,8 @@ const forms = () => {
                         item.classList.add('fadeInUp');
                     }, 5000);
                 });
-        })
-    })
+        });
+    });
 };
 
 export default forms;
