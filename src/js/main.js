@@ -4,6 +4,7 @@ import forms from './modules/forms';
 import mask from './modules/mask';
 import checkTextInputs from './modules/checkTextInputs';
 import showMoreStyles from './modules/showMoreStyles';
+import calc from './modules/calc';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -12,9 +13,11 @@ window.addEventListener('DOMContentLoaded', () => {
     modals();
     sliders('.main-slider-item', 'vertical');
     sliders('.feedback-slider-item', null, '.main-prev-btn', '.main-next-btn');
-    forms();
     mask('[name="phone"]');
     checkTextInputs('[name="name"]');
     checkTextInputs('[name="message"]');
     showMoreStyles('.button-styles', '#styles .row');
-})
+    calc('#size', '#material', '#options', '.promocode', '.calc-price');
+    forms();
+
+});
