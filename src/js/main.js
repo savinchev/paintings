@@ -7,6 +7,8 @@ import showMoreStyles from './modules/showMoreStyles';
 import calc from './modules/calc';
 import filter from './modules/filter';
 import pictureSize from './modules/pictureSize';
+import accordeon from './modules/accordeon';
+import burger from './modules/burger';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -22,6 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
     calc('#size', '#material', '#options', '.promocode', '.calc-price');
     forms();
     filter();
-    pictureSize('.sizes-block')
+    pictureSize('.sizes-block');
+    accordeon('.accordion-heading');
+    burger('.burger', '.burger-menu');
 
 });
